@@ -1,8 +1,7 @@
 provider "aws" {
   region = var.aws_region
+  profile = var.aws_profile
 }
-
-provider "cloudflare" {}
 
 resource "aws_s3_bucket" "site" {
   bucket = var.site_domain
